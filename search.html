@@ -14,16 +14,30 @@
       <table>
         <tr>
           <td>
-            <a href="index.html"> <strong>Start</strong></a>
+            <a href="index.html"> Start</a>
           </td>
-          <td><a href="search.html">Sök bok</a></td>
+          <td>
+            <a href="search.html"><strong>Sök bok</strong></a>
+          </td>
           <td><a href="about.html">Om oss</a></td>
           <td>
             <a href="index.html#boktips" style="color: red"> Utvalda böcker </a>
           </td>
         </tr>
       </table>
-      <hr color="gold">
+      <hr color="gold" />
     </header>
+    <section>
+      <h2>Sök efter en bok</h2>
+      <form
+        method="GET"
+        action=""
+        onsubmit="window.location.href='db/' + document.getElementById('search').value + '.html'; return false;"
+      >
+        <label for="isbn">ISBN</label>
+        <input type="search" placeholder="Sök..." id="search" required />
+        <input type="submit" value="Hitta boken" />
+      </form>
+    </section>
   </body>
 </html>
